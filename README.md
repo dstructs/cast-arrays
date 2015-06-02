@@ -31,7 +31,7 @@ var out = cast( arr, 'float32' );
 // returns Float32Array
 ```
 
-`type` may be either a `string` stating the desired output `array` data type or a value from which the desired data type should be inferred.
+`type` may be either a `string` specifying the desired output `array` data type or a value from which the desired data type should be inferred.
 
 ``` javascript
 var x = Int32Array( 10 ),
