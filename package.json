@@ -25,12 +25,27 @@
   "keywords": [
     "compute.io",
     "compute",
-    "computation"
+    "computation",
+    "cast",
+    "typed-array",
+    "typed",
+    "array",
+    "array-like",
+    "constructor",
+    "ctor",
+    "dtype",
+    "data",
+    "type",
+    "copy",
+    "clone"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/cast-arrays/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "type-name": "^1.0.1",
+    "validate.io-array-like": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",

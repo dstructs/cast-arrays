@@ -17,18 +17,52 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'compute-cast-arrays' );
+var cast = require( 'compute-cast-arrays' );
 ```
 
-#### foo( arr )
+#### cast( x, type )
 
-What does this function do?
+Casts an input `array` or [`array-like`](https://github.com/validate-io/array-like) object to a specified `array` type.
+
+``` javascript
+var arr = Int32Array( 10 );
+
+var out = cast( arr, 'float32' );
+// returns Float32Array
+```
+
+`type` may be either a `string` stating the desired output `array` data type or a value from which the desired data type should be inferred.
+
+``` javascript
+var x = Int32Array( 10 ),
+	y = Float32Array( 25 );
+
+// Cast `x` to be the same data type as `y`:
+var out = cast( x, y );
+// returns Float32Array
+```
+
+For a list of supported output `array` data types, see [compute-array-constructors](https://github.com/compute-io/array-constructors).
+
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'compute-cast-arrays' );
+var cast = require( 'compute-cast-arrays' ),
+	arr,
+	x, y, z;
+
+arr = new Int8Array( 10 );
+x = cast( arr, 'int16' );
+// returns Int16Array
+
+arr = new Array( 100 );
+y = cast( arr, 'float64' );
+// returns Float64Array
+
+z = cast( x, y );
+// returns Float64Array
 ```
 
 To run the example code from the top-level application directory,
