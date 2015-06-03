@@ -46,7 +46,7 @@
     "compute-array-constructors": "^1.0.0",
     "compute-array-dtype": "^1.0.0",
     "type-name": "^1.0.1",
-    "validate.io-array-like": "^1.0.0"
+    "validate.io-array-like": "^1.0.1"
   },
   "devDependencies": {
     "chai": "2.x.x",
