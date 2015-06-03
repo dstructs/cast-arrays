@@ -29,14 +29,14 @@ describe( 'compute-cast-arrays', function tests() {
 
 	it( 'should throw an error if not provided an array-like object', function test() {
 		var values = [
-			'5',
+			// '5', // array-like
 			5,
 			NaN,
 			true,
 			null,
 			undefined,
 			{},
-			function(){}
+			// function(){} // array-like
 		];
 
 		for ( var i = 0; i < values.length; i++ ) {
@@ -100,7 +100,7 @@ describe( 'compute-cast-arrays', function tests() {
 
 		assert.strictEqual( typeName( out ), 'Int32Array' );
 
-		arr = new Array( [1,2,3,4,5] );
+		arr = new Array(1,2,3,4,5);
 		out = cast( arr, 'int16' );
 
 		assert.strictEqual( typeName( out ), 'Int16Array' );
@@ -118,7 +118,7 @@ describe( 'compute-cast-arrays', function tests() {
 
 		assert.strictEqual( typeName( out ), 'Int32Array' );
 
-		arr = new Array( [1,2,3,4,5] );
+		arr = new Array(1,2,3,4,5);
 		out = cast( arr, new Int16Array( 22 ) );
 
 		assert.strictEqual( typeName( out ), 'Int16Array' );
