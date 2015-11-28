@@ -8,7 +8,7 @@ cast-arrays
 ## Installation
 
 ``` bash
-$ npm install compute-cast-arrays
+$ npm install dstructs-cast-arrays
 ```
 
 For use in the browser, use [browserify][browserify].
@@ -17,7 +17,7 @@ For use in the browser, use [browserify][browserify].
 ## Usage
 
 ``` javascript
-var cast = require( 'compute-cast-arrays' );
+var cast = require( 'dstructs-cast-arrays' );
 ```
 
 #### cast( x, type )
@@ -49,7 +49,7 @@ For a list of supported output `array` data types, see [dstructs-array-construct
 ## Examples
 
 ``` javascript
-var cast = require( 'compute-cast-arrays' ),
+var cast = require( 'dstructs-cast-arrays' ),
 	arr,
 	x, y, z;
 
@@ -111,8 +111,8 @@ $ make view-cov
 Copyright &copy; 2015. The Compute.io Authors.
 
 
-[npm-image]: http://img.shields.io/npm/v/compute-cast-arrays.svg
-[npm-url]: https://npmjs.org/package/compute-cast-arrays
+[npm-image]: http://img.shields.io/npm/v/dstructs-cast-arrays.svg
+[npm-url]: https://npmjs.org/package/dstructs-cast-arrays
 
 [travis-image]: http://img.shields.io/travis/dstructs/cast-arrays/master.svg
 [travis-url]: https://travis-ci.org/dstructs/cast-arrays
