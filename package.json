@@ -1,6 +1,6 @@
 {
   "name": "compute-cast-arrays",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Casts an array to an array of a different data type.",
   "author": {
     "name": "Athan Reines",
