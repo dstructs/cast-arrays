@@ -1,6 +1,6 @@
 {
   "name": "dstructs-cast-arrays",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Casts an array to an array of a different data type.",
   "author": {
     "name": "Athan Reines",
