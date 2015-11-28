@@ -1,6 +1,6 @@
 cast-arrays
 ===
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependencies][dependencies-image]][dependencies-url]
 
 > Casts an array to an array of a different data type.
 
@@ -11,7 +11,7 @@ cast-arrays
 $ npm install compute-cast-arrays
 ```
 
-For use in the browser, use [browserify](https://github.com/substack/node-browserify).
+For use in the browser, use [browserify][browserify].
 
 
 ## Usage
@@ -22,7 +22,7 @@ var cast = require( 'compute-cast-arrays' );
 
 #### cast( x, type )
 
-Casts an input `array` or [`array-like`](https://github.com/validate-io/array-like) object to a specified `array` type.
+Casts an input `array` or [`array-like`][array-like] object to a specified `array` type.
 
 ``` javascript
 var arr = Int32Array( 10 );
@@ -42,7 +42,7 @@ var out = cast( x, y );
 // returns Float32Array
 ```
 
-For a list of supported output `array` data types, see [compute-array-constructors](https://github.com/compute-io/array-constructors).
+For a list of supported output `array` data types, see [dstructs-array-constructors][dstructs-array-constructors].
 
 
 
@@ -76,7 +76,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://mochajs.org/) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha][mocha] test framework with [Chai][chai] assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -87,7 +87,7 @@ All new feature development should have corresponding unit tests to validate cor
 
 ### Test Coverage
 
-This repository uses [Istanbul](https://github.com/gotwarlost/istanbul) as its code coverage tool. To generate a test coverage report, execute the following command in the top-level application directory:
+This repository uses [Istanbul][istanbul] as its code coverage tool. To generate a test coverage report, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test-cov
@@ -114,17 +114,25 @@ Copyright &copy; 2015. The Compute.io Authors.
 [npm-image]: http://img.shields.io/npm/v/compute-cast-arrays.svg
 [npm-url]: https://npmjs.org/package/compute-cast-arrays
 
-[travis-image]: http://img.shields.io/travis/compute-io/cast-arrays/master.svg
-[travis-url]: https://travis-ci.org/compute-io/cast-arrays
+[travis-image]: http://img.shields.io/travis/dstructs/cast-arrays/master.svg
+[travis-url]: https://travis-ci.org/dstructs/cast-arrays
 
-[coveralls-image]: https://img.shields.io/coveralls/compute-io/cast-arrays/master.svg
-[coveralls-url]: https://coveralls.io/r/compute-io/cast-arrays?branch=master
+[codecov-image]: https://img.shields.io/codecov/c/github/dstructs/cast-arrays/master.svg
+[codecov-url]: https://codecov.io/github/dstructs/cast-arrays?branch=master
 
-[dependencies-image]: http://img.shields.io/david/compute-io/cast-arrays.svg
-[dependencies-url]: https://david-dm.org/compute-io/cast-arrays
+[dependencies-image]: http://img.shields.io/david/dstructs/cast-arrays.svg
+[dependencies-url]: https://david-dm.org/dstructs/cast-arrays
 
-[dev-dependencies-image]: http://img.shields.io/david/dev/compute-io/cast-arrays.svg
-[dev-dependencies-url]: https://david-dm.org/dev/compute-io/cast-arrays
+[dev-dependencies-image]: http://img.shields.io/david/dev/dstructs/cast-arrays.svg
+[dev-dependencies-url]: https://david-dm.org/dev/dstructs/cast-arrays
 
-[github-issues-image]: http://img.shields.io/github/issues/compute-io/cast-arrays.svg
-[github-issues-url]: https://github.com/compute-io/cast-arrays/issues
+[github-issues-image]: http://img.shields.io/github/issues/dstructs/cast-arrays.svg
+[github-issues-url]: https://github.com/dstructs/cast-arrays/issues
+
+[browserify]: https://github.com/substack/node-browserify
+[mocha]: http://mochajs.org/
+[chai]: http://chaijs.com
+[istanbul]: https://github.com/gotwarlost/istanbul
+
+[array-like]: https://github.com/validate-io/array-like
+[dstructs-array-constructors]: https://github.com/dstructs/array-constructors

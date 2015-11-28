@@ -3,13 +3,8 @@
 
 // MODULES //
 
-var // Expectation library:
-	chai = require( 'chai' ),
-
-	// Get a value's type name:
+var chai = require( 'chai' ),
 	typeName = require( 'type-name' ),
-
-	// Module to be tested:
 	cast = require( './../lib' );
 
 
@@ -21,7 +16,7 @@ var expect = chai.expect,
 
 // TESTS //
 
-describe( 'compute-cast-arrays', function tests() {
+describe( 'dstructs-cast-arrays', function tests() {
 
 	it( 'should export a function', function test() {
 		expect( cast ).to.be.a( 'function' );

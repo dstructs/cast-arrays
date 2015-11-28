@@ -6,14 +6,11 @@ var cast = require( './../lib' ),
 
 arr = new Int8Array( 10 );
 x = cast( arr, 'int16' );
-console.log( x.BYTES_PER_ELEMENT );
-// returns Int16Array
+console.log( '%d bytes per element', x.BYTES_PER_ELEMENT );
 
 arr = new Array( 100 );
 y = cast( arr, 'float64' );
-console.log( y.BYTES_PER_ELEMENT );
-// returns Float64Array
+console.log( '%d bytes per element', y.BYTES_PER_ELEMENT );
 
 z = cast( x, y );
-console.log( z.BYTES_PER_ELEMENT );
-// returns Float64Array
+console.log( '%d bytes per element', z.BYTES_PER_ELEMENT );
