@@ -123,4 +123,29 @@ describe( 'dstructs-cast-arrays', function tests() {
 		}
 	});
 
+	it( 'should ensure fast elements when casting to a generic array', function test() {
+		var arr, out, len, i;
+
+		// Less than 64K elements...
+		arr = new Int8Array( [1,2,3,4,5] );
+		out = cast( arr, 'generic' );
+
+		assert.strictEqual( typeName( out ), 'Array' );
+		assert.deepEqual( out, [1,2,3,4,5] );
+
+		// Greater than 64K elements...
+		len = 100000;
+		arr = new Int32Array( len );
+		for ( i = 0; i < len; i++ ) {
+			arr[ i ] = i;
+		}
+		out = cast( arr, 'generic' );
+
+		assert.strictEqual( typeName( out ), 'Array' );
+
+		for ( i = 0; i < len; i++ ) {
+			assert.strictEqual( arr[i], out[i] );
+		}
+	});
+
 });
